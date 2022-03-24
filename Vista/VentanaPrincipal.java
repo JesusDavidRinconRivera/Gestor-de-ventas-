@@ -1,3 +1,4 @@
+// monki.com
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,7 +16,7 @@ public class VentanaPrincipal extends JFrame {
     public VentanaPrincipal() {
 
         configurarVentana();
-        inicializarComponentes();  
+        inicializarComponentes();
     }
 
     private void configurarVentana() {
