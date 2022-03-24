@@ -1,6 +1,4 @@
-// monki.com
-//monki2
-//monki3
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -16,7 +14,6 @@ public class VentanaPrincipal extends JFrame {
     private JButton boton;
 
     public VentanaPrincipal() {
-
         configurarVentana();
         inicializarComponentes();
     }
@@ -33,18 +30,14 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void inicializarComponentes() {
-        // creamos los componentes
         texto = new JLabel();
         caja = new JTextField();
         boton = new JButton();
-        // configuramos los componentes
         texto.setText("Inserte Nombre");
         texto.setBounds(50, 50, 100, 25);
         caja.setBounds(150, 50, 100, 25);
         boton.setText("Mostrar Mensaje");
         boton.setBounds(50, 100, 200, 30);
-
-
         this.add(texto);
         this.add(caja);
         this.add(boton);
