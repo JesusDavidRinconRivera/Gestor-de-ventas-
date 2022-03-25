@@ -19,10 +19,10 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void configurarVentana() {
-      int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;
-      int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;
+      int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;    //Coje la resolucion de la pantalla en alto
+      int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;     //Coje la resolucion de la pantalla en ancho
+        this.setBounds((ancho / 2) - (this.getWidth() / 2), (alto / 2) - (this.getHeight() / 2), 500, 500); // Hace que siempre este a la misma resolucion
         this.setTitle("Esta Es Una Ventana");
-        this.setBounds((ancho / 2) - (this.getWidth() / 2), (alto / 2) - (this.getHeight() / 2), 500, 500);
         this.setLocationRelativeTo(null);
         this.setLayout(null);
         this.setResizable(false);
