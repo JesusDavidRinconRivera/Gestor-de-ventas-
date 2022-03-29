@@ -12,15 +12,17 @@ public class Place_Holder {
     public static void main(String[] args){
         JFrame frame = new JFrame();
         JPanel panel = new JPanel();
-
-        int ancho = java.awt.Toolkit.getDefaultToolkit().getScreenSize().width;//Coje la resolucion de la pantalla en alto
-        int alto = java.awt.Toolkit.getDefaultToolkit().getScreenSize().height;//Coje la resolucion de la pantalla en ancho
-        frame.setTitle("Esta Es Una Ventana");
-        frame.setBounds((ancho / 2) - (frame.getWidth() / 2), (alto / 2) - (frame.getHeight() / 2), 1600, 1000);// Hace que siempre este a la misma resolucion
+        frame.setSize(400,250);
+        frame.setTitle("Place Holder");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLocationRelativeTo(null);
         frame.add(panel);
+
         panel.setLayout(null);
+
+
+        label1 = new JLabel("Name: ");
+        label1.setBounds(10,20,100,25);
+        panel.add(label1);
 
 
         name = new JTextField();
@@ -43,7 +45,9 @@ public class Place_Holder {
         });
         panel.add(name);
 
-
+        label2 = new JLabel("Father-Name");
+        label2.setBounds(10,70,80,25);
+        panel.add(label2);
         father_Name = new JTextField();
         father_Name.setBounds(100,70,156,25);
         father_Name.setText("Enter Your Father Name");
@@ -63,6 +67,19 @@ public class Place_Holder {
            }
         });
         panel.add(father_Name);
+
+        print = new JButton("Print");
+        print.setBounds(100,120,80,25);
+        print.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent event){
+                String myname = name.getText();
+                String myfathername = father_Name.getText();
+                System.out.println("Your Name: "+myname);
+                System.out.println("Your Father Name: "+myfathername);
+            }
+        });
+        panel.add(print);
+
         frame.setVisible(true);
     }
 

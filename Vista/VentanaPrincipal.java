@@ -11,6 +11,7 @@ public class VentanaPrincipal extends JFrame {
 
         configurarVentana();
         inicializarComponentes();
+        TextPrompt prueba = new TextPrompt("kajsbdkjabdkja",cajaTextoNombre);
     }
 
     private void configurarVentana() {
@@ -27,7 +28,7 @@ public class VentanaPrincipal extends JFrame {
     private void inicializarComponentes() {
         // creamos los componentes
 
-        cajaTextoNombre = new JTextField("Nombre Completo");
+        cajaTextoNombre = new JTextField();
         caja2 = new JTextField();
         caja3 = new JTextField();
         caja4 = new JTextField();
