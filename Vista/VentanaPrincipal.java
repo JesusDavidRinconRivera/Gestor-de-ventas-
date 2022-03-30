@@ -9,9 +9,9 @@ import java.awt.Color;
  //:~~---------/-----------------------/----------------
 public class VentanaPrincipal extends JFrame{
 
-  private static JLabel EtiquetaPrecioTotal;
-  private static JTextArea CampoLista,CampoBaseDeDatos;
-  private static JTextField CajaTextoNombre,CajaTextoCedula,CajaTextoTelefono,CajaTextoBuscarProducto;
+  private JLabel EtiquetaPrecioTotal;
+  private JTextArea CampoLista,CampoBaseDeDatos;
+  private JTextField CajaTextoNombre,CajaTextoCedula,CajaTextoTelefono,CajaTextoBuscarProducto;
   private JButton BotonVerde,BotonRojo,BotonVender,BotonAgregar, BotonModificar,BotonEliminar;
 
   public VentanaPrincipal(){
