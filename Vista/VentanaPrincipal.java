@@ -5,9 +5,8 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.Color;
 
-/**
- * VentanaPrincipal
- */
+ //:~~Fuente utilizada en los comentarios :Fira Code
+ //:~~---------/-----------------------/----------------
 public class VentanaPrincipal extends JFrame{
 
   private static JLabel EtiquetaPrecioTotal;
