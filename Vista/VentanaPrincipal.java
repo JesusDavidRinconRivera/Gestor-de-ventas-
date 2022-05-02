@@ -9,7 +9,7 @@ import java.awt.Color;
 // :~~---------/-----------------------/----------------
 public class VentanaPrincipal extends JFrame {
 
-    private JLabel EtiquetaPrecioTotal;
+    private JLabel EtiquetaPrecioTotal, CampoImagen;
     private JTextArea CampoLista,
             CampoBaseDeDatos;
     private JTextField CajaTextoNombre,
@@ -35,22 +35,8 @@ public class VentanaPrincipal extends JFrame {
     }
 
     private void ConfiguracionVentana() {
-
-        int ancho = java.awt.Toolkit
-                .getDefaultToolkit()
-                .getScreenSize().width; // Coje la resolucion de la pantalla en alto
-        int alto = java.awt.Toolkit
-                .getDefaultToolkit()
-                .getScreenSize().height; // Coje la resolucion de la pantalla en ancho
-        this.setTitle("Esta Es Una Ventana");
-        this.setBounds(
-                (ancho / 2) - (this.getWidth() / 2),
-                (alto / 2) - (this.getHeight() / 2),
-                1600,
-                1000); // Hace que siempre este a la misma resolucion
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setTitle("Esta Es Una Ventana");
-
         this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
@@ -61,9 +47,9 @@ public class VentanaPrincipal extends JFrame {
         // :==========================================================================
         // ========================= :CAJAS DE TEXTO DEL PANEL DE DATOS :PANEL DE DATOS
         JPanel PanelDatos = new JPanel();
-        PanelDatos.setBackground(new Color(123, 219, 200));
+        // PanelDatos.setBackground(new Color(123, 219, 200));
         // (Posicion x, Posicion y, tamaño x , tamaño y)
-        PanelDatos.setBounds(100, 30, 583, 240);
+        PanelDatos.setBounds(100, 80, 583, 240);
         PanelDatos.setLayout(null);
         this
                 .getContentPane()
@@ -71,7 +57,7 @@ public class VentanaPrincipal extends JFrame {
         // CAJA DE NOMBRE
 
         CajaTextoNombre = new JTextField();
-        CajaTextoNombre.setBounds(150, 20, 165, 25);
+        CajaTextoNombre.setBounds(10, 20, 530, 40);
         CajaTextoNombre.setText("Nombre Completo");
         CajaTextoNombre.addFocusListener(new FocusListener() {
             @Override
@@ -93,7 +79,7 @@ public class VentanaPrincipal extends JFrame {
 
         // :~CAJA DE CEDULA
         CajaTextoCedula = new JTextField();
-        CajaTextoCedula.setBounds(150, 50, 165, 25);
+        CajaTextoCedula.setBounds(10, 70, 530, 40);
         CajaTextoCedula.setText("Cedula");
         CajaTextoCedula.addFocusListener(new FocusListener() {
             @Override
@@ -115,7 +101,7 @@ public class VentanaPrincipal extends JFrame {
 
         // :~CAJA DE Telefono
         CajaTextoTelefono = new JTextField();
-        CajaTextoTelefono.setBounds(150, 80, 165, 25);
+        CajaTextoTelefono.setBounds(10, 120, 530, 40);
         CajaTextoTelefono.setText("Telefono");
         CajaTextoTelefono.addFocusListener(new FocusListener() {
             @Override
@@ -137,7 +123,7 @@ public class VentanaPrincipal extends JFrame {
 
         // :~CAJA DE BUSCAR PRODUCTO
         CajaTextoBuscarProducto = new JTextField();
-        CajaTextoBuscarProducto.setBounds(150, 110, 165, 25);
+        CajaTextoBuscarProducto.setBounds(10, 170, 530, 40);
         CajaTextoBuscarProducto.setText("Buscar Producto");
         CajaTextoBuscarProducto.addFocusListener(new FocusListener() {
             @Override
@@ -157,43 +143,13 @@ public class VentanaPrincipal extends JFrame {
         });
         PanelDatos.add(CajaTextoBuscarProducto);
 
-        // ==========================================================================
-        // BOTONES DEL PANEL DE DATOS :BOTÓN VERDE
-        /*
-         * javax.swing.GroupLayout layout = new
-         * javax.swing.GroupLayout(getContentPane());
-         * getContentPane().setLayout(layout);
-         * layout.setHorizontalGroup(
-         * layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-         * .addGroup(layout.createSequentialGroup()
-         * // .addGap(0, 0, 0)
-         * // .addGap(1, 1, 1) alineado con el panel de la derecha
-         * .addGap(0, 0, 0)
-         * .addComponent(PanelDatos, javax.swing.GroupLayout.DEFAULT_SIZE,
-         * javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-         * .addGap(0, 5/* no tocar el 5
-         */ /*
-             * , 840)));
-             * layout.setVerticalGroup(
-             * layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-             * .addGroup(layout.createSequentialGroup()
-             * .addGap(100, 100, 100)
-             * .addComponent(PanelDatos, javax.swing.GroupLayout.DEFAULT_SIZE,
-             * javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-             * .addGap(100, 100, 750)));
-             * // addGap(nada, tamaño inferior ,)
-             */
-
     }
-
-    // .addGap(400, 400, 750)));
-    // .addGap(200, 223, 750)));
 
     private void PanelBotonesDatos() {
         JPanel PanelBotonesDatos = new JPanel();
-        PanelBotonesDatos.setBackground(new Color(123, 172, 198));
+        // PanelBotonesDatos.setBackground(new Color(123, 172, 198));
         // (Posicion x, Posicion y, tamaño x , tamaño y)
-        PanelBotonesDatos.setBounds(100, 270, 583, 60);
+        PanelBotonesDatos.setBounds(100, 320, 583, 60);
         PanelBotonesDatos.setLayout(null);
         this
                 .getContentPane()
@@ -236,9 +192,9 @@ public class VentanaPrincipal extends JFrame {
     private void PanelProducto() {
         // :PANEL DE DATOS
         JPanel PanelProducto = new JPanel();
-        PanelProducto.setBackground(new Color(71, 225, 125));
+        // PanelProducto.setBackground(new Color(71, 225, 125));
         // (Posicion x, Posicion y, tamaño x , tamaño y)
-        PanelProducto.setBounds(683, 30, 617, 240);
+        PanelProducto.setBounds(683, 80, 617, 240);
         PanelProducto.setLayout(null);
         this
                 .getContentPane()
@@ -246,17 +202,22 @@ public class VentanaPrincipal extends JFrame {
 
         // :~LISTA
         CampoLista = new JTextArea();
-        CampoLista.setBounds(20, 40, 200, 100);
+        CampoLista.setBounds(20, 20, 261, 193);
         CampoLista.setBackground(new Color(209, 230, 228));
         CampoLista.setText("Lista...");
         PanelProducto.add(CampoLista);
+
+        CampoImagen = new JLabel(new ImageIcon("images/images.jpg"));
+        CampoImagen.setBounds(300, 20, 261, 193);
+        PanelProducto.add(CampoImagen);
+
     }
 
     private void PanelBotonesProductos() {
         JPanel PanelBotonesProductos = new JPanel();
-        PanelBotonesProductos.setBackground(new Color(220, 224, 103));
+        // PanelBotonesProductos.setBackground(new Color(220, 224, 103));
         // (Posicion x, Posicion y, tamaño x , tamaño y)
-        PanelBotonesProductos.setBounds(683, 270, 617, 60);
+        PanelBotonesProductos.setBounds(683, 320, 617, 60);
         PanelBotonesProductos.setLayout(null);
         this
                 .getContentPane()
@@ -281,7 +242,7 @@ public class VentanaPrincipal extends JFrame {
 
         // :~PRECIO TOTAL
         EtiquetaPrecioTotal = new JLabel();
-        EtiquetaPrecioTotal.setBounds(20, 20, 50, 20);
+        EtiquetaPrecioTotal.setBounds(25, 20, 50, 20);
         EtiquetaPrecioTotal.setText("Total...");
         PanelBotonesProductos.add(EtiquetaPrecioTotal);
     }
@@ -289,8 +250,8 @@ public class VentanaPrincipal extends JFrame {
     private void PanelBaseDeDatos() {
         // :PANEL DE DATOS
         JPanel PanelBaseDeDatos = new JPanel();
-        PanelBaseDeDatos.setBackground(new Color(255, 71, 148));
-        PanelBaseDeDatos.setBounds(100, 330, 940, 350);
+        // PanelBaseDeDatos.setBackground(new Color(255, 71, 148));
+        PanelBaseDeDatos.setBounds(100, 380, 1040, 350);
         PanelBaseDeDatos.setLayout(null);
         this
                 .getContentPane()
@@ -298,18 +259,19 @@ public class VentanaPrincipal extends JFrame {
 
         // :~BASE DE DATOS
         CampoBaseDeDatos = new JTextArea();
-        CampoBaseDeDatos.setBounds(20, 20, 900, 310);
+        CampoBaseDeDatos.setBounds(20, 20, 1000, 310);
         CampoBaseDeDatos.setBackground(new Color(209, 230, 228));
         CampoBaseDeDatos.setText("Base de Datos...");
         PanelBaseDeDatos.add(CampoBaseDeDatos);
 
     }
 
+    // Morado
     private void PanelBotonesBaseDeDatos() {
         // :PANEL DE BOTONES DE BASE DE DATOS
         JPanel PanelBotonesBaseDeDatos = new JPanel();
-        PanelBotonesBaseDeDatos.setBackground(new Color(182, 36, 255));
-        PanelBotonesBaseDeDatos.setBounds(1040, 330, 260, 350);
+        // PanelBotonesBaseDeDatos.setBackground(new Color(182, 36, 255));
+        PanelBotonesBaseDeDatos.setBounds(1140, 380, 160, 350);
         PanelBotonesBaseDeDatos.setLayout(null);
         this
                 .getContentPane()
@@ -318,8 +280,8 @@ public class VentanaPrincipal extends JFrame {
         // boton Agregar
         BotonAgregar = new JButton();
         BotonAgregar.setText("Agregar");
-        BotonAgregar.setBackground(Color.WHITE);
-        BotonAgregar.setBounds(30, 40, 170, 30);
+        // BotonAgregar.setBackground(Color.WHITE);
+        BotonAgregar.setBounds(20, 20, 120, 30);
         PanelBotonesBaseDeDatos.add(BotonAgregar);
         // ActionListener Para Botón Verde
         ActionListener AccionBotonAgregar = new ActionListener() {
@@ -336,7 +298,7 @@ public class VentanaPrincipal extends JFrame {
         BotonModificar = new JButton();
         BotonModificar.setText("Modificar");
         BotonModificar.setBackground(Color.WHITE);
-        BotonModificar.setBounds(30, 80, 170, 30);
+        BotonModificar.setBounds(20, 60, 120, 30);
         PanelBotonesBaseDeDatos.add(BotonModificar);
         // ActionListener Para Botón Verde
         ActionListener AccionBotonModificar = new ActionListener() {
@@ -353,7 +315,7 @@ public class VentanaPrincipal extends JFrame {
         BotonEliminar = new JButton();
         BotonEliminar.setText("Borrar");
         BotonEliminar.setBackground(Color.white);
-        BotonEliminar.setBounds(30, 120, 170, 30);
+        BotonEliminar.setBounds(20, 100, 120, 30);
         PanelBotonesBaseDeDatos.add(BotonEliminar);
         // ActionListener Para Botón Verde
         ActionListener AccionBotonEliminar = new ActionListener() {

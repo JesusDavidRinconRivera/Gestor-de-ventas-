@@ -9,7 +9,7 @@ public class conect {
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tabla", "root", "");
             System.out.println("conectó esa madre");
         } catch (Exception e) {
-            System.err.println("Error" + e);
+            System.err.println("(no conectó esa madre) Error " + e);
         }
     }
 }
