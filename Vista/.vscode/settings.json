@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Jose R\\Documents\\Archivos Academicos\\Trabajo De Venta\\Gestor-de-ventas--master\\lib\\JTattoo-1.6.13.jar",
+        "c:\\Users\\Jose R\\Documents\\Archivos Academicos\\Trabajo De Venta\\Gestor-de-ventas--master\\lib\\mysql-connector-java-5.1.15-bin.jar"
+    ]
+}
